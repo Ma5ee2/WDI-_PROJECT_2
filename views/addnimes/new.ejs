@@ -1,0 +1,26 @@
+<form method="POST" action="/hotels">
+  <div>
+    <label for="nameOfShow">Name of Show</label>
+    <input type="text" name="nameOfShow" id="nameOfShow" required>
+  <div>
+    <label for="yearReleased">Year released</label>
+    <input type="number" name="yearReleased" id="yearReleased" required>
+  </div>
+  </div>
+
+  <div>
+    <label for="description">Description</label>
+    <textarea class="form-control" name="description" rows="8" cols="80"></textarea>
+  </div>
+
+  <div>
+    <label for="stars">Stars</label>
+    <input type="number" name="stars" id="stars" min="1" max="5" required>
+  </div>
+  <div>
+    <label for="image">Image</label>
+    <input type="text" name="image" id="image" required>
+  </div>
+
+  <button class="button">Add anime</button>
+</form>

@@ -1,0 +1,17 @@
+<% addnimes.forEach((addnime) => { %>
+  <div class="large-4 columns">
+    <a href="/addnimes/<%= addnime.id %>">
+      <img class="thumbnail" src="<%= addnime.image %>" alt="<%= addnime.nameOfShow %>">
+      <h2><%= addnime.nameOfShow %></h2>
+      <h3><%= addnime.yearReleased %></h3>
+      <p>
+        <%= addnime.description %>
+      </p>
+
+      <p>
+        <% while(addnime.stars--) { %> &star; <% } %>
+        <%= addnime.createdBy.username %>
+      </p>
+    </a>
+  </div>
+<% }) %>
