@@ -1,25 +1,51 @@
 const express = require('express');
 const router  = express.Router();
+const sessionsController = require('../controllers/sessions');
+const registrationController = require('../controllers/registration');
+const addnimesController = require('../controllers/addnimes');
+const secureRoute = require('../lib/secureRoute');
 
 // A home route
-router.get('/', (req, res) => res.render('homepage'));
+router.get('/', (req, res) => res.render('statics/index'));
 
-// RESTful routes
-// All URLS should contain the PLURAL... don't chose octopus or people or something silly.
+router.route('/register')
+.get(registrationController.new);
 
-// INDEX
+router.route('/login')
+.get(sessionsController.new);
 
-// NEW
+router.route('/addnimes')
+  .get(addnimesController.index)
+  .post(secureRoute, addnimesController.create);
 
-// SHOW
+router.route('/addnimes/new')
+  .get(secureRoute, addnimesController.new);
 
-// CREATE
+router.route('/addnimes/:id')
+  .get(addnimesController.show)
+  .put(secureRoute, addnimesController.update)
+  .delete(secureRoute, addnimesController.delete);
 
-// EDIT
+router.route('/addnimes/:id/edit')
+  .get(secureRoute, addnimesController.edit);
 
-// UPDATE
+router.route('/addnimes/:id/comments')
+  .post(secureRoute, addnimesController.createComment);
 
-// DELETE
+router.route('/addnimes/:id/comments/:commentId')
+  .delete(secureRoute, addnimesController.deleteComment);
 
+router.route('/register')
+  .get(registrationController.new)
+  .post(registrationController.create);
+
+router.route('/login')
+  .get(sessionsController.new)
+  .post(sessionsController.create);
+
+router.route('/logout')
+  .get(sessionsController.delete);
+
+router.all('*', (req, res) => res.notFound());
 
 module.exports = router;

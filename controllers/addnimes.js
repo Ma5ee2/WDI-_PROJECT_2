@@ -1,4 +1,4 @@
-const Hotel = require('../models/hotel');
+const Addnime = require('../models/addnime');
 
 function indexRoute(req, res, next) {
   Addnime
@@ -43,7 +43,7 @@ function editRoute(req, res, next) {
     .findById(req.params.id)
     .exec()
     .then((addnime) => {
-      return res.render('hotels/edit', { addnime });
+      return res.render('addnimes/edit', { addnime });
     })
     .catch(next);
 }
@@ -93,7 +93,7 @@ function createCommentRoute(req, res, next) {
       addnime.comments.push(req.body); // create an embedded record
       return addnime.save();
     })
-    .then((addnime) => res.redirect(`/hotels/${addnime.id}`))
+    .then((addnime) => res.redirect(`/addnimes/${addnime.id}`))
     .catch(next);
 }
 
