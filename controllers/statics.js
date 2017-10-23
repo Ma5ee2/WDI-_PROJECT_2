@@ -1,5 +1,5 @@
 function staticsHome(req, res) {
-	res.render('statics/homepage');
+	res.render('addnimes/homepage');
 }
 
 module.exports = {

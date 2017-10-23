@@ -21,7 +21,7 @@ function createRoute(req, res, next) {
     .create(req.body)
     .then(() => res.redirect('/addnimes'))
     .catch((err) => {
-      if(err.username === 'ValidationError') return res.badRequest(`/addnimes/${req.params.id}/edit`, err.toString());
+      if(err.name === 'ValidationError') return res.badRequest(`/addnimes/${req.params.id}/edit`, err.toString());
       next(err);
     });
 }
@@ -103,6 +103,7 @@ function deleteCommentRoute(req, res, next) {
     .exec()
     .then((addnime) => {
       if(!addnime) return res.notFound();
+      if (!addnime.belongsTo(req.user)) return res.unauthorized('You do not have permission to delete!');
       // get the embedded record by it's id
       const comment = addnime.comments.id(req.params.commentId);
       comment.remove();

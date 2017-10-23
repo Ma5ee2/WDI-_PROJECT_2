@@ -26,13 +26,13 @@
         <h4>Leave a comment</h4>
         <form method="POST" action="/addnimes/<%= addnime.id %>/comments">
           <textarea name="content" id="content" placeholder="Comment" required maxlength="255"></textarea>
-          <button class="button">Leave a comment</button>
+          <button class="button">Submit</button>
         </form>
       </section>
     <% } %>
+
     <% if(locals.isAuthenticated && addnime.belongsTo(user)) { %>
       <a href="/addnimes/<%= addnime.id %>/edit" class="button">Edit</a>
-      
       <form method="POST" action="/addnimes/<%= addnime.id %>">
         <input type="hidden" name="_method" value="DELETE">
         <button class="button alert">Delete</button>
