@@ -1,6 +1,6 @@
 <h1>Addnime</h1>
 <% addnimes.forEach((addnime) => { %>
-  <div class="large-4 columns">
+  <div class="large-6 columns">
     <a href="/addnimes/<%= addnime.id %>">
       <img class="thumbnail" src="<%= addnime.image %>" alt="<%= addnime.nameOfShow %>">
       <h2><%= addnime.nameOfShow %></h2>
@@ -11,6 +11,7 @@
 
       <p>
         <% while(addnime.stars--) { %> &star; <% } %>
+        
       </p>
     </a>
   </div>
