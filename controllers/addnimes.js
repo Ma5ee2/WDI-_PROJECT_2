@@ -21,7 +21,7 @@ function createRoute(req, res, next) {
     .create(req.body)
     .then(() => res.redirect('/addnimes'))
     .catch((err) => {
-      if(err.name === 'ValidationError') return res.badRequest(`/addnimes/${req.params.id}/edit`, err.toString());
+      if(err.username === 'ValidationError') return res.badRequest(`/addnimes/${req.params.id}/edit`, err.toString());
       next(err);
     });
 }

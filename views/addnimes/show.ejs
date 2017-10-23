@@ -1,25 +1,41 @@
-<div class="large-12 columns">
-  <img src="<%= addnime.image %>" alt="<%= addnime.nameOfShow %>">
-  <h2><%= addnime.nameOfShow %></h2>
-  <h3><%= addnime.yearReleased %></h3>
-  <p>
-    <%= addnime.description %><br>
-  </p>
+  <div class="large-12 columns">
+    <img src="<%= addnime.image %>" alt="<%= addnime.nameOfShow %>">
+    <h2><%= addnime.nameOfShow %></h2>
+    <h2><%= addnime.yearReleased %></h2>
 
-  <p>
-    <% while(addnime.stars--) { %> &star; <% } %>
-  </p>
-  <section>
-    <h4>Comments</h4>
-    <% addnime.comments.forEach((comment) => { %>
-      <p><%= comment.content %></p>
-      <small><%= comment.createdBy.username %></small>
-      <% if(locals.isAuthenticated && comment.belongsTo(user)) { %>
-        <form method="POST" action="/addnimes/<%= addnime.id %>/comments/<%= comment.id %>">
-        <input type="hidden" name="_method" value="DELETE">
-        <button>Delete</button>
+    <p>
+      <%= addnime.description %><br>
+    </p>
+
+    <p>
+      <% while(addnime.stars--) { %> &star; <% } %>
+    </p>
+
+    <small>Added by: <%= addnime.createdBy.username %></small>
+
+    <section>
+      <h4>Comments</h4>
+      <% addnime.comments.forEach((comment) => { %>
+        <p><%= comment.content %></p>
+        <small><%= comment.createdBy.username %></small>
+      <% }) %>
+    </section>
+
+    <% if(locals.isAuthenticated) { %>
+      <section>
+        <h4>Leave a comment</h4>
+        <form method="POST" action="/addnimes/<%= addnime.id %>/comments">
+          <textarea name="content" id="content" placeholder="Comment" required maxlength="255"></textarea>
+          <button class="button">Leave a comment</button>
         </form>
-        <% } %>
-        <% }) %>
       </section>
-    </div>
+    <% } %>
+    <% if(locals.isAuthenticated && addnime.belongsTo(user)) { %>
+      <a href="/addnimes/<%= addnime.id %>/edit" class="button">Edit</a>
+      
+      <form method="POST" action="/addnimes/<%= addnime.id %>">
+        <input type="hidden" name="_method" value="DELETE">
+        <button class="button alert">Delete</button>
+      </form>
+    <% } %>
+  </div>
