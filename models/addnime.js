@@ -13,8 +13,8 @@ commentSchema.methods.belongsTo = function commentBelongsTo(user) {
 };
 
 const addnimeSchema = new mongoose.Schema({
-  nameOfShow: String,
-  yearReleased: Number,
+  nameOfShow: { type: String, required: true },
+  yearReleased: { type: Number, required: true },
   description: { type: String, required: true },
   image: { type: String, required: true },
   stars: { type: Number, required: true },
