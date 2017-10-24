@@ -12,9 +12,9 @@
     <% } %>
     <img class="img-fluid" src="<%= addnime.image %>" alt="<%= addnime.nameOfShow %>">
     <h2 class="bold"><%= addnime.nameOfShow %></h2>
-    <h2><%= addnime.yearReleased %></h2>
+    <h4>Release date: <%= addnime.yearReleased %></h4>
     <p>
-      <div class="starsColor"><% while(addnime.stars--) { %> &star; <% } %></div>
+      <div>Rating: <span class="starsColor"><% while(addnime.stars--) { %> &star; <% } %></span></div>
     </p>
     <p>
       <%= addnime.description %><br>
@@ -31,7 +31,6 @@
     <% if(locals.isAuthenticated) { %>
       <section>
         <h4>Leave a comment</h4>
-
         <form method="POST" action="/addnimes/<%= addnime.id %>/comments">
           <div class="form-group">
             <textarea class="form-control" name="content" id="content" placeholder="Comment" required maxlength="255"></textarea>

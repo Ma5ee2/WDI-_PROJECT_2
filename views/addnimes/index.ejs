@@ -1,18 +1,18 @@
 <div class="container">
   <div class="row">
-<% addnimes.forEach((addnime) => { %>
-  <div class="col-6">
-      <a href="/addnimes/<%= addnime.id %>"><img class="img-thumbnail img-fluid" src="<%= addnime.image %>" alt="<%= addnime.nameOfShow %>"></a>
-      <h2 class="bold"><%= addnime.nameOfShow %></h2>
-      <h3><%= addnime.yearReleased %></h3>
-      <p>
-        <div class="starsColor"><% while(addnime.stars--) { %> &star; <% } %></div>
-      </p>
-      <p>
-        <%= addnime.description %>
-      </p>
-
-  </div>
-<% }) %>
+  <% addnimes.forEach((addnime) => { %>
+    <div class="col-6">
+    <a href="/addnimes/<%= addnime.id %>"><img class="img-thumbnail img-fluid" src="<%= addnime.image %>" alt="<%= addnime.nameOfShow %>"></a>
+    <h2 class="bold"><%= addnime.nameOfShow %></h2>
+    <h4>Release date: <%= addnime.yearReleased %></h4>
+    <p>
+    <div >Rating: <span class="starsColor"><% while(addnime.stars--) { %> &star; <% } %></span></div>
+    </p>
+    <p><small>Added by user: <%= addnime.createdBy.username %></small></p>
+    <p>
+    <%= addnime.description %>
+    </p>
+    </div>
+    <% }) %>
   </div>
 </div>

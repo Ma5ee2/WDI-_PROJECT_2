@@ -82,7 +82,7 @@ User
      nameOfShow: 'Dragon Ball Z',
      yearReleased: '1989',
      description: 'Dragon Ball Z follows the adventures of the protagonist Goku who, along with his companions, defends the Earth against an assortment of villains ranging from intergalactic space fighters and conquerors, unnaturally powerful androids and nearly indestructible creatures. While the original Dragon Ball anime followed Goku from his childhood into adulthood, Dragon Ball Z is a continuation of his adult life, but at the same time parallels the maturation of his sons, Gohan and Goten, as well as the evolution of his rivals Piccolo and Vegeta from enemies into allies.',
-     image: 'https://vignette.wikia.nocookie.net/vsbattles/images/7/7e/Dragonball_z_by_goddessmechanic2-d7paus4-is-there-still-hope-for-a-live-action-dragon-ball-z-movie-jpeg-199365.jpg/revision/latest/scale-to-width-down/700?cb=20151112140401',
+     image: 'https://cdn.suwalls.com/wallpapers/anime/dragon-ball-z-16145-1920x1080.jpg',
      stars: 5,
      createdBy: users[0],
      comments: {
