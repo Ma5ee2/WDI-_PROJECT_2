@@ -17,8 +17,8 @@ User
 .create([{
   username: 'Ma5ee2',
   email: 'hussainmasee@gmail.com',
-  password: 'password',
-  passwordConfirmation: 'password'
+  password: 'one',
+  passwordConfirmation: 'one'
 }])
 .then((users) => {
   console.log(`${users.length} users created`);
@@ -48,7 +48,7 @@ User
   },{
     nameOfShow: 'Hunter X Hunter',
     yearReleased: '2011',
-    description: 'Hunter × Hunter (Japanese: ハンター×ハンター Hepburn: Hantā Hantā, abbreviated: HxH) is a Japanese manga sries written and illustrated by Yoshihiro Togashi. It has been serialized in Weekly Shōnen Jump magazine and journal snce March 3, 1998, although the manga has frequently gone on extended hiatuses since 2006. As of June 2017, 360 capters have been collected into 34 volumes by Shueisha. The story focuses on a young boy named Gon Freecss, who dscovers that his father, who he was told was dead, is actually alive and a world-renowned Hunter, a licensed pofession for those who specialize in fantastic pursuits such as locating rare or unidentified animal species, teasure hunting, surveying unexplored enclaves, or hunting down lawless individuals. Despite being abandoned by his fther, Gon departs upon a journey to follow in his footsteps, pass the rigorous Hunter Examination, and eventually fnd his father. Along the way, Gon meets various other Hunters and also encounters the paranormal. The original ispiration for the manga came from Togashi\'s own collecting hobby.',
+    description: 'Hunter × Hunter (Japanese: ハンター×ハンター Hepburn: Hantā Hantā, abbreviated: HxH) is a Japanese manga series written and illustrated by Yoshihiro Togashi. It has been serialized in Weekly Shōnen Jump magazine and journal since March 3, 1998, although the manga has frequently gone on extended hiatuses since 2006. As of June 2017, 360 chapters have been collected into 34 volumes by Shueisha. The story focuses on a young boy named Gon Freecss, who discovers that his father, who he was told was dead, is actually alive and a world-renowned Hunter, a licensed profession for those who specialize in fantastic pursuits such as locating rare or unidentified animal species, treasure hunting, surveying unexplored enclaves, or hunting down lawless individuals. Despite being abandoned by his futher, Gon departs upon a journey to follow in his footsteps, pass the rigorous Hunter Examination, and eventually find his father. Along the way, Gon meets various other Hunters and also encounters the paranormal. The original inspiration for the manga came from Togashi\'s own collecting hobby.',
     image: 'https://ib2.hulu.com/show_key_art/18620?size=1600x600&region=US',
     stars: 5,
     createdBy: users[0],
