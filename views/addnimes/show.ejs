@@ -11,7 +11,7 @@
       </div>
     <% } %>
     <img class="img-fluid" src="<%= addnime.image %>" alt="<%= addnime.nameOfShow %>">
-    <h2><%= addnime.nameOfShow %></h2>
+    <h2 class="bold"><%= addnime.nameOfShow %></h2>
     <h2><%= addnime.yearReleased %></h2>
     <p>
       <div class="starsColor"><% while(addnime.stars--) { %> &star; <% } %></div>
@@ -19,10 +19,11 @@
     <p>
       <%= addnime.description %><br>
     </p>
+    <small>Added by user: <%= addnime.createdBy.username %></small>
     <section>
-      <h4>Comments</h4>
+      <h4 class="bold comments">Comments</h4>
       <% addnime.comments.forEach((comment) => { %>
-        <p><%= comment.content %></p>
+        <div><p><span class="starsColor" ><%= comment.createdBy.username %>: </span><%= comment.content %></p></div>
       <% }) %>
     </section>
   </div>

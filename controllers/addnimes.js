@@ -30,6 +30,7 @@ function showRoute(req, res, next) {
   Addnime
     .findById(req.params.id)
     .populate('comments.createdBy')
+    .populate('createdBy')
     .exec()
     .then((addnime) => {
       if(!addnime) return res.notFound();
