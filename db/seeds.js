@@ -89,8 +89,8 @@ User
      content: 'Best show ever!',
      createdBy: users[0]
     }
-    }])
+  }]);
+})
     .then((addnimes) => console.log(`${addnimes.length} shows created`))
     .catch((err) => console.log(err))
-    .finally(() => mongoose.connection.close())
-})
+    .finally(() => mongoose.connection.close());

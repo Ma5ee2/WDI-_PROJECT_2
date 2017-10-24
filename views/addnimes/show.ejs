@@ -1,14 +1,23 @@
-  <div class="container">
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+    <% if(locals.isAuthenticated && addnime.belongsTo(user)) { %>
+      <div class="anime-options">
+        <a href="/addnimes/<%= addnime.id %>/edit" class="btn btn-primary">Edit content</a>
+        <form method="POST" action="/addnimes/<%= addnime.id %>">
+          <input type="hidden" name="_method" value="DELETE">
+          <button class="btn btn-primary">Delete all</button>
+        </form>
+      </div>
+    <% } %>
     <img class="img-fluid" src="<%= addnime.image %>" alt="<%= addnime.nameOfShow %>">
     <h2><%= addnime.nameOfShow %></h2>
     <h2><%= addnime.yearReleased %></h2>
-
+    <p>
+      <div class="starsColor"><% while(addnime.stars--) { %> &star; <% } %></div>
+    </p>
     <p>
       <%= addnime.description %><br>
-    </p>
-
-    <p>
-      <% while(addnime.stars--) { %> &star; <% } %>
     </p>
     <section>
       <h4>Comments</h4>
@@ -16,22 +25,22 @@
         <p><%= comment.content %></p>
       <% }) %>
     </section>
-
+  </div>
+<div class="form-group container-fluid">
     <% if(locals.isAuthenticated) { %>
       <section>
         <h4>Leave a comment</h4>
+
         <form method="POST" action="/addnimes/<%= addnime.id %>/comments">
-          <textarea name="content" id="content" placeholder="Comment" required maxlength="255"></textarea>
-          <button class="button">Submit</button>
+          <div class="form-group">
+            <textarea class="form-control" name="content" id="content" placeholder="Comment" required maxlength="255"></textarea>
+          </div>
+          <div class="form-group">
+            <button class="btn btn-primary">Submit comment</button>
+          </div>
         </form>
       </section>
     <% } %>
-
-    <% if(locals.isAuthenticated && addnime.belongsTo(user)) { %>
-      <a href="/addnimes/<%= addnime.id %>/edit" class="button">Edit</a>
-      <form method="POST" action="/addnimes/<%= addnime.id %>">
-        <input type="hidden" name="_method" value="DELETE">
-        <button class="button alert">Delete</button>
-      </form>
-    <% } %>
+    </div>
   </div>
+</div>

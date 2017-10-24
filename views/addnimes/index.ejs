@@ -2,18 +2,16 @@
   <div class="row">
 <% addnimes.forEach((addnime) => { %>
   <div class="col-6">
-    <a href="/addnimes/<%= addnime.id %>">
-      <img class="img-thumbnail img-fluid" src="<%= addnime.image %>" alt="<%= addnime.nameOfShow %>">
+      <a href="/addnimes/<%= addnime.id %>"><img class="img-thumbnail img-fluid" src="<%= addnime.image %>" alt="<%= addnime.nameOfShow %>"></a>
       <h2><%= addnime.nameOfShow %></h2>
       <h3><%= addnime.yearReleased %></h3>
+      <p>
+        <div class="starsColor"><% while(addnime.stars--) { %> &star; <% } %></div>
+      </p>
       <p>
         <%= addnime.description %>
       </p>
 
-      <p>
-        <% while(addnime.stars--) { %> &star; <% } %>
-      </p>
-    </a>
   </div>
 <% }) %>
   </div>
