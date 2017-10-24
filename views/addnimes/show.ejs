@@ -1,16 +1,16 @@
 <div class="container">
   <div class="row">
     <div class="col-12">
+    <img class="height img-thumbnail" src="<%= addnime.image %>" alt="<%= addnime.nameOfShow %>">
     <% if(locals.isAuthenticated && addnime.belongsTo(user)) { %>
       <div class="anime-options">
-        <a href="/addnimes/<%= addnime.id %>/edit" class="btn btn-primary">Edit content</a>
+        <a href="/addnimes/<%= addnime.id %>/edit" class="btn btn-outline-primary">Edit content</a>
         <form method="POST" action="/addnimes/<%= addnime.id %>">
           <input type="hidden" name="_method" value="DELETE">
-          <button class="btn btn-primary">Delete all</button>
+          <button class="btn btn-outline-danger">Delete all</button>
         </form>
       </div>
     <% } %>
-    <img class="img-fluid" src="<%= addnime.image %>" alt="<%= addnime.nameOfShow %>">
     <h2 class="bold"><%= addnime.nameOfShow %></h2>
     <h4>Release date: <%= addnime.yearReleased %></h4>
     <p>

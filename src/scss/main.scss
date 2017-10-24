@@ -8,23 +8,23 @@ body {
 
 .webpage-font {
   font-family: 'Bangers', cursive;
-  font-size: 40px;
+  font-size: 50px;
 }
 
 .masee {
   position: inherit;
   float: right;
-  padding: 20px;
+  padding: 10px;
 }
 
 .ga {
   position: inherit;
   float: left;
-  padding: 20px;
+  padding: 10px;
 }
 
 .img-fluid {
-  min-height: 300px;
+  min-height: 250px;
 }
 
 .bold {
@@ -35,10 +35,12 @@ body {
   padding: 10px 0 10px 0;
 }
 
+
+
 .anime-options {
-  position: absolute;
-  top: 20px;
-  right: 35px;
+  position: auto;
+  top: 355px;
+  right: 15px;
   text-align: right;
   a, button {
     margin-bottom: 10px;
@@ -64,4 +66,8 @@ body {
 
 .login {
   padding: 120px 0 310px 0;
+}
+
+.nav-link {
+  font-size: 20px;
 }
