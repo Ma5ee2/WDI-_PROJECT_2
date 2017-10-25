@@ -101,6 +101,7 @@ function createCommentRoute(req, res, next) {
 function deleteCommentRoute(req, res, next) {
   Addnime
     .findById(req.params.id)
+    .populate('comments.createdBy')
     .exec()
     .then((addnime) => {
       if(!addnime) return res.notFound();

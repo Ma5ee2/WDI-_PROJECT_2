@@ -24,7 +24,7 @@
       <h4 class="bold comments">Comments:</h4>
       <% addnime.comments.forEach((comment) => { %>
         <div class="border-comment"><p><span class="starsColor" ><%= comment.createdBy.username %>: </span><%= comment.content %></p></div>
-        <% if (`${comment.createdBy._id}` === `${locals.user._id}`) { %>
+        <% if (`${comment.createdBy}` === `${locals.user}`) { %>
           <form method="POST" action="/addnimes/<%= addnime.id %>/comments/<%= comment.id %>">
             <input type="hidden" name="_method" value="DELETE">
             <button class="delete-comment btn btn-primary">Delete comment</button>
