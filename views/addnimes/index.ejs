@@ -2,7 +2,7 @@
   <div class="row">
   <% addnimes.forEach((addnime) => { %>
     <div class="col-6">
-    <a href="/addnimes/<%= addnime.id %>"><img class="img-thumbnail img-fluid" src="<%= addnime.image %>" alt="<%= addnime.nameOfShow %>"></a>
+    <a href="/addnimes/<%= addnime.id %>"><img class="img-thumbnail img img-fluid" src="<%= addnime.image %>" alt="<%= addnime.nameOfShow %>"></a>
     <h2 class="bold"><%= addnime.nameOfShow %></h2>
     <h4>Release date: <%= addnime.yearReleased %></h4>
     <p>

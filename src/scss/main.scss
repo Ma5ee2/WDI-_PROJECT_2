@@ -9,22 +9,24 @@ body {
 .webpage-font {
   font-family: 'Bangers', cursive;
   font-size: 50px;
+  padding: 0px;
+  margin: auto;
 }
 
 .masee {
   position: inherit;
   float: right;
-  padding: 10px;
+  padding: 5px;
 }
 
 .ga {
   position: inherit;
   float: left;
-  padding: 10px;
+  padding: 5px;
 }
 
-.img-fluid {
-  min-height: 250px;
+.img {
+  min-height: 300px;
 }
 
 .bold {
@@ -35,16 +37,15 @@ body {
   padding: 10px 0 10px 0;
 }
 
-
-
 .anime-options {
-  position: auto;
-  top: 355px;
-  right: 15px;
+  position: absolute;
+  top: 20px;
+  right: 35px;
   text-align: right;
   a, button {
     margin-bottom: 10px;
-    min-width: 150px;
+    min-width: 120px;
+    padding: 0px;
     cursor: pointer;
   }
 }

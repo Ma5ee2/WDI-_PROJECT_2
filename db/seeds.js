@@ -15,10 +15,10 @@ User.collection.drop();
 // Create the models
 User
 .create([{
-  username: 'Ma5ee2',
+  username: 'Masee',
   email: 'hussainmasee@gmail.com',
-  password: 'one',
-  passwordConfirmation: 'one'
+  password: '123',
+  passwordConfirmation: '123'
 }])
 .then((users) => {
   console.log(`${users.length} users created`);
