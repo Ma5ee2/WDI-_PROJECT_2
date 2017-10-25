@@ -101,10 +101,11 @@ function createCommentRoute(req, res, next) {
 function deleteCommentRoute(req, res, next) {
   Addnime
     .findById(req.params.id)
+    .populate('comments.createdBy')
     .exec()
     .then((addnime) => {
       if(!addnime) return res.notFound();
-      if (!addnime.belongsTo(req.user)) return res.unauthorized('You do not have permission to delete!');
+      // if (!addnime.belongsTo(req.user)) return res.unauthorized('You do not have permission to delete!');
       // get the embedded record by it's id
       const comment = addnime.comments.id(req.params.commentId);
       comment.remove();

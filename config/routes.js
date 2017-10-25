@@ -29,6 +29,9 @@ router.route('/addnimes/:id/edit')
 
 router.route('/addnimes/:id/comments')
   .post(secureRoute, addnimesController.createComment)
+
+
+router.route('/addnimes/:id/comments/:commentId')
   .delete(secureRoute, addnimesController.deleteComment);
 
 router.route('/register')
