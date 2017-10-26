@@ -78,41 +78,41 @@ User
       content: 'Best show ever!',
       createdBy: users[0]
     }
-    },{
-     nameOfShow: 'Dragon Ball Z',
-     yearReleased: '1989',
-     description: 'Dragon Ball Z follows the adventures of the protagonist Goku who, along with his companions, defends the Earth against an assortment of villains ranging from intergalactic space fighters and conquerors, unnaturally powerful androids and nearly indestructible creatures. While the original Dragon Ball anime followed Goku from his childhood into adulthood, Dragon Ball Z is a continuation of his adult life, but at the same time parallels the maturation of his sons, Gohan and Goten, as well as the evolution of his rivals Piccolo and Vegeta from enemies into allies.',
-     image: 'https://media.tenor.com/images/09b622215ff7bc6c8bc842704f9f1344/tenor.gif',
-     stars: 5,
-     createdBy: users[0],
-     comments: {
-     content: 'Best show ever!',
-     createdBy: users[0]
+  },{
+    nameOfShow: 'Dragon Ball Z',
+    yearReleased: '1989',
+    description: 'Dragon Ball Z follows the adventures of the protagonist Goku who, along with his companions, defends the Earth against an assortment of villains ranging from intergalactic space fighters and conquerors, unnaturally powerful androids and nearly indestructible creatures. While the original Dragon Ball anime followed Goku from his childhood into adulthood, Dragon Ball Z is a continuation of his adult life, but at the same time parallels the maturation of his sons, Gohan and Goten, as well as the evolution of his rivals Piccolo and Vegeta from enemies into allies.',
+    image: 'https://media.tenor.com/images/09b622215ff7bc6c8bc842704f9f1344/tenor.gif',
+    stars: 5,
+    createdBy: users[0],
+    comments: {
+      content: 'Best show ever!',
+      createdBy: users[0]
     }
-    },{
-     nameOfShow: 'One-Punch Man',
-     yearReleased: '2015',
-     description: 'One-Punch Man (Japanese: ワンパンマン Hepburn: Wanpanman) is an ongoing Japanese superhero parody webcomic created by an author using the pseudonym One[4] which began publication in early 2009.[5] The series quickly went viral, surpassing 7.9 million hits in June 2012.[6] The Japanese shortened name Wanpanman is a play on the long-running children\'s character Anpanman,[7] wanpan being a contraction of wanpanchi ("one punch").[8] One-Punch Man tells the story of Saitama, an extremely overpowered superhero, who has grown bored by the absence of challenge in his fight against evil and seeks to find a worthy opponent.',
-     image: 'https://images.genius.com/9eadedafb4453eaca88a3ef617c76703.540x302x30.gif',
-     stars: 5,
-     createdBy: users[0],
-     comments: {
-     content: 'Best show ever!',
-     createdBy: users[0]
+  },{
+    nameOfShow: 'One-Punch Man',
+    yearReleased: '2015',
+    description: 'One-Punch Man (Japanese: ワンパンマン Hepburn: Wanpanman) is an ongoing Japanese superhero parody webcomic created by an author using the pseudonym One[4] which began publication in early 2009.[5] The series quickly went viral, surpassing 7.9 million hits in June 2012.[6] The Japanese shortened name Wanpanman is a play on the long-running children\'s character Anpanman,[7] wanpan being a contraction of wanpanchi ("one punch").[8] One-Punch Man tells the story of Saitama, an extremely overpowered superhero, who has grown bored by the absence of challenge in his fight against evil and seeks to find a worthy opponent.',
+    image: 'https://images.genius.com/9eadedafb4453eaca88a3ef617c76703.540x302x30.gif',
+    stars: 5,
+    createdBy: users[0],
+    comments: {
+      content: 'Best show ever!',
+      createdBy: users[0]
     }
-    },{
-     nameOfShow: 'Attack on Titan',
-     yearReleased: '1989',
-     description: 'Attack on Titan (Japanese: 進撃の巨人 Hepburn: Shingeki no Kyojin, lit. "Advancing Giants") is a Japanese manga series written and illustrated by Hajime Isayama. The series began in Kodansha\'s Bessatsu Shōnen Magazine on September 9, 2009, and has been collected into 23 tankōbon volumes as of August 2017. It is set in a world where humanity lives in cities surrounded by enormous walls; a defense against the Titans, gigantic humanoids that eat humans seemingly without reason. The story initially centers on Eren Yeager and his childhood friends Mikasa Ackerman and Armin Arlert, who join the military to fight the Titans after their hometown is invaded and Eren\'s mother is eaten. However, as the story progresses and the truths about the Titans are slowly revealed to the reader, the narrative shifts to encompass Historia Reiss, squad leader Levi, Eren\'s father Grisha, and other supporting characters.',
-     image: 'https://media.giphy.com/media/fdMGvqJkcHG92/giphy.gif',
-     stars: 4,
-     createdBy: users[0],
-     comments: {
-     content: 'Best show ever!',
-     createdBy: users[0]
+  },{
+    nameOfShow: 'Attack on Titan',
+    yearReleased: '1989',
+    description: 'Attack on Titan (Japanese: 進撃の巨人 Hepburn: Shingeki no Kyojin, lit. "Advancing Giants") is a Japanese manga series written and illustrated by Hajime Isayama. The series began in Kodansha\'s Bessatsu Shōnen Magazine on September 9, 2009, and has been collected into 23 tankōbon volumes as of August 2017. It is set in a world where humanity lives in cities surrounded by enormous walls; a defense against the Titans, gigantic humanoids that eat humans seemingly without reason. The story initially centers on Eren Yeager and his childhood friends Mikasa Ackerman and Armin Arlert, who join the military to fight the Titans after their hometown is invaded and Eren\'s mother is eaten. However, as the story progresses and the truths about the Titans are slowly revealed to the reader, the narrative shifts to encompass Historia Reiss, squad leader Levi, Eren\'s father Grisha, and other supporting characters.',
+    image: 'https://media.giphy.com/media/fdMGvqJkcHG92/giphy.gif',
+    stars: 4,
+    createdBy: users[0],
+    comments: {
+      content: 'Best show ever!',
+      createdBy: users[0]
     }
   }]);
 })
-    .then((addnimes) => console.log(`${addnimes.length} shows created`))
-    .catch((err) => console.log(err))
-    .finally(() => mongoose.connection.close());
+.then((addnimes) => console.log(`${addnimes.length} shows created`))
+.catch((err) => console.log(err))
+.finally(() => mongoose.connection.close());
