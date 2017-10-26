@@ -60,7 +60,7 @@ User
     nameOfShow: 'Naruto',
     yearReleased: '2002',
     description: 'Naruto (ナルト) is a Japanese manga series written and illustrated by Masashi Kishimoto. It tells the sry of Naruto Uzumaki, an adolescent ninja who searches for recognition and dreams of becoming the Hokage, the lader o his village. The story is in two parts, the first set in Naruto\'s pre-teen years, and the second in his tens. The sries is based on two one-shot manga by Kishimoto: Karakuri (1995), which earned Kishimoto an honorable mntion in Sueisha\'s monthly Hop Step Award the following year, and Naruto (1997).',
-    image: 'http://www.wtfgamersonly.com/wp-content/uploads/2015/02/key_art_naruto.jpg',
+    image: 'https://media.giphy.com/media/PUPkpLcCAFRyU/giphy.gif',
     stars: 5,
     createdBy: users[0],
     comments: {
@@ -82,7 +82,7 @@ User
      nameOfShow: 'Dragon Ball Z',
      yearReleased: '1989',
      description: 'Dragon Ball Z follows the adventures of the protagonist Goku who, along with his companions, defends the Earth against an assortment of villains ranging from intergalactic space fighters and conquerors, unnaturally powerful androids and nearly indestructible creatures. While the original Dragon Ball anime followed Goku from his childhood into adulthood, Dragon Ball Z is a continuation of his adult life, but at the same time parallels the maturation of his sons, Gohan and Goten, as well as the evolution of his rivals Piccolo and Vegeta from enemies into allies.',
-     image: 'https://cdn.suwalls.com/wallpapers/anime/dragon-ball-z-16145-1920x1080.jpg',
+     image: 'https://media.tenor.com/images/09b622215ff7bc6c8bc842704f9f1344/tenor.gif',
      stars: 5,
      createdBy: users[0],
      comments: {
